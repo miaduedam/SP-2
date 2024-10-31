@@ -1,8 +1,8 @@
 abstract class Title {
     String title;
     String literatureType;
-    protected int copies;
-    protected static final double RATE = 0.067574;
+    int copies;
+    double rate = 0.067574;
 
     public Title(String title, String literatureType, int copies) {
         this.title = title;
@@ -23,7 +23,7 @@ abstract class Title {
                 default: return 1.0;
             }
     }
-    protected double calculateRoyalty() {
-        return calculatePoints() * RATE;
+    double calculateRoyalty() {
+        return calculatePoints() * rate;
     }
 }

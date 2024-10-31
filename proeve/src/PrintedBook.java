@@ -1,16 +1,16 @@
 class PrintedBook extends Title {
-    private int pages;
+    int pages;
 
     public PrintedBook(String title, String literatureType, int copies, int pages) {
         super(title, literatureType, copies);
         this.pages = pages;
     }
 
-        @Override
+    @Override
         double calculatePoints() {
         return pages * calculateLiteraturePoints() * copies;
     }
-    double calculateLiteraturePoints(){
+        double calculateLiteraturePoints(){
         return 0;
     }
 }
